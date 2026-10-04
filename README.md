@@ -52,6 +52,16 @@ The Ingredients and Method sections use a single-column layout on small screens 
 
 The page was tested at 320px width to ensure that content remains readable and usable without horizontal scrolling.
 
+## Keyboard Accessibility
+
+The interface can be operated entirely using the keyboard.
+
+- Press `Tab` to move through interactive elements in visual order.
+- Press `Enter` or `Space` to activate the serving controls.
+- The serving controls have visible focus indicators using `:focus-visible`.
+- Native HTML `<button>` elements are used instead of clickable `<div>` elements.
+- The Ingredients and Method sections remain usable on narrow screens without horizontal scrolling.
+
 ## Project Structure
 
 src/
