@@ -1,32 +1,76 @@
-# React + TypeScript + Vite
+ ### Recipe with Adjustable Servings
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive and accessible recipe page built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Adjustable recipe servings
+- Ingredient quantities update automatically
+- Minimum serving count of 0
+- Screen-reader announcements when servings change
+- Keyboard-accessible serving controls
+- Responsive layout for mobile and desktop
+- No horizontal scrolling at 320px width
 
-## React Compiler
+# Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Tailwind CSS
+- React Icons
+- Vite
 
-## Expanding the Oxlint configuration
+# How It Works
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+The recipe starts with 2 servings. Users can increase or decrease the serving count using the "+" and "−" buttons.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Ingredient quantities are calculated based on the original recipe serving size:
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+`adjusted quantity = original quantity × (selected servings ÷ 2)`
+
+For example, if the original recipe contains 200g of pasta for 2 servings:
+
+- 2 servings → 200g
+- 3 servings → 300g
+- 4 servings → 400g
+
+## Accessibility
+
+The serving controls use native HTML buttons so they can be operated using the keyboard with Tab, Enter, and Space.
+
+Visible focus styles are provided for keyboard users.
+
+The serving changes are announced to screen readers using `aria-live="polite"`.
+
+The minus and plus icons are hidden from screen readers because the buttons already have accessible labels.
+
+## Narrow-Screen Handling
+
+At narrow screen widths, the serving controls switch to a vertical layout so they remain usable without horizontal scrolling.
+
+The Ingredients and Method sections use a single-column layout on small screens and switch to a two-column layout on larger screens.
+
+The page was tested at 320px width to ensure that content remains readable and usable without horizontal scrolling.
+
+## Project Structure
+
+src/
+├── App.tsx
+└── component/
+    ├── Banner.tsx
+    └── Body.tsx
+
+## Running the Project
+
+Install dependencies:
+
+npm install
+npm run dev
+
+## Project in GitHub
+
+Added github, some importent commit
+
+`git add.`
+`git commit -m"button updated"`
+`git push -u origin main`
