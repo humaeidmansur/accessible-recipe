@@ -63,12 +63,22 @@ The interface can be operated entirely using the keyboard.
 - The Ingredients and Method sections remain usable on narrow screens without horizontal scrolling.
 
 ## Project Structure
-
-src/
-├── App.tsx
-└── component/
-    ├── Banner.tsx
-    └── Body.tsx
+accessible-recipe/
+│
+├── src/
+│   ├── component/
+│   │   ├── Banner.tsx
+│   │   └── Body.tsx
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── public/
+├── README.md
+├── CONTRIBUTING.md
+├── package.json
+└── vite.config.ts
 
 ## Running the Project
 
