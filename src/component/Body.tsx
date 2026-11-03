@@ -197,7 +197,7 @@ const Body = () => {
                 <h3 className="font-semibold">Add vegetables</h3>
 
                 <p className="mt-1 text-gray-600">
-                  Add onion, garlic and cherry tomatoes. Cook for 3–5 minutes.
+                  Add onion, garlic and cherry tomatoes. Cook for 3-5 minutes.
                 </p>
               </div>
             </li>
