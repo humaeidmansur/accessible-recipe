@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { LuMinus, LuPlus, LuInfo } from "react-icons/lu";
 
+type Ingredient = {
+  name: string;
+  quantity: number;
+  unit: string;
+};
+
 const Body = () => {
   const [servings, setServings] = useState(2);
 
-  const ingredients = [
+  const ingredients: Ingredient[] = [
     { name: "Pasta (penne)", quantity: 200, unit: "g" },
     { name: "Chicken breast", quantity: 150, unit: "g" },
     { name: "Onion", quantity: 1, unit: "medium" },
